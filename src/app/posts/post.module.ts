@@ -43,7 +43,7 @@ const routes: Routes = [
     ],
     providers: [
         PostsDataService,
-        PostResolver
+        // PostResolver
     ]
 })
 export class PostsModule {

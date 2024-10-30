@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
@@ -11,10 +11,13 @@ import { Post } from 'src/app/models/post.model';
 })
 export class AddPostComponent {
   addPostForm!: FormGroup;
+  value = signal(5);
   constructor(
     private postService: PostService,
     private router: Router
-  ) { }
+  ) {
+    console.log(this.value())
+   }
 
   ngOnInit(): void {
     this.addPostForm = new FormGroup({

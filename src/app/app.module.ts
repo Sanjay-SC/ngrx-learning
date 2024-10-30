@@ -33,11 +33,11 @@ import { ReactiveFormsModule } from '@angular/forms';
       logOnly: environment.production
     }),
     EffectsModule.forRoot([]),
-    EntityDataModule.forRoot(entityConfig),
+    EntityDataModule.forRoot({}),
     ReactiveFormsModule
   ],
   providers: [
-    PostResolver
+    
   ],
   bootstrap: [AppComponent]
 })
